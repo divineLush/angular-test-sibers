@@ -6,6 +6,7 @@ import { ItemComponent } from './components/item/item.component';
 import { HttpClientModule }   from '@angular/common/http';
 import { HttpService } from './http-service';
 import { WindowMoreComponent } from './components/item/window-more/window-more.component';
+import { HttpClient } from 'selenium-webdriver/http';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
