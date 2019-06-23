@@ -10,7 +10,7 @@ import { Contact } from './contact';
 })
 export class AppComponent implements OnInit{
   title = 'beaux contacts';
-  data:Object[];
+  data: Contact[];
 
   constructor(private http: HttpService) { }
 
@@ -18,5 +18,9 @@ export class AppComponent implements OnInit{
     this.http.getData().subscribe(d => {
       this.data = d;
     })
+  }
+
+  sort(): void {
+    this.data = this.data.sort((a, b) => (a.name > b.name ? 1 : -1));;
   }
 }

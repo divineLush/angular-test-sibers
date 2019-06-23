@@ -1,4 +1,8 @@
-import { Component, OnInit, EventEmitter, Input, Output } from '@angular/core';
+import { Component, OnInit, EventEmitter, Input, Output, Inject } from '@angular/core';
+
+import { WindowMoreComponent } from './window-more/window-more.component';
+
+import { Contact } from '../../contact';
 
 @Component({
   selector: 'app-item',
@@ -6,14 +10,17 @@ import { Component, OnInit, EventEmitter, Input, Output } from '@angular/core';
   styleUrls: ['./item.component.css']
 })
 export class ItemComponent implements OnInit {
-  @Input() @Output() item: Object;
+  @Input() item: Contact;
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
   }
 
-  editItem(): void {
-    console.log(123);
+  editItem(): void {}
+
+  showMore(): void {
+    //his.dialog.open(WindowMoreComponent, { data: this.item });
   }
 }

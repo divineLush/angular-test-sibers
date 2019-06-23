@@ -3,11 +3,11 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
   
 @Injectable()
-export class HttpService{
+export class HttpService {
   
-    constructor(private http: HttpClient){ }
+    constructor(private http: HttpClient) {}
       
-    getData(): Observable<any>{
+    getData(): Observable<any> {
         return this.http.get('http://demo.sibers.com/users')
     }
 }

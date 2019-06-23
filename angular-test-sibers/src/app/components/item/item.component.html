@@ -2,5 +2,8 @@
   <span>
     {{ item.name }}
   </span>
-  <button class="btn btn-secondary">Редактировать</button>
+  <div>
+    <a [routerLink]="[ '/more' ]">Подробнее</a>
+    <a [routerLink]="[ '/edit' ]">Редактировать</a>
+  </div>
 </div>
